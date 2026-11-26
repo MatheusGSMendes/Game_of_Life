@@ -1,5 +1,7 @@
 #define MAX_LINHAS 100
 #define MAX_COLUNAS 100
+#include <fstream>
+
 
 //definição da estrutura do jogo
 struct Mundo {
@@ -11,3 +13,7 @@ struct Mundo {
 };
 
 //funções
+void inicializarMundoVazio(Mundo &m);
+bool carregarMapaInicial(const char nomeArquivo[], Mundo &m);
+void imprimirMundo(const Mundo &m);
+
